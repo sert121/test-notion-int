@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Routes,
+  HashRouter,
+  Router
+} from "react-router-dom";
+
+import {BrowserRouter} from "react-router-dom" 
+import NotionHandler from './components/NotionHandler';
+import HomePage from './components/Home';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+return(
+
+  <BrowserRouter>
+  <Routes>
+
+      <Route exact path="notion" element={
+          <>
+          <NotionHandler />
+          </>} 
+          />
+
+      <Route exact path="/" element={
+        <>
+        <HomePage />
+        </>} 
+        />
+ 
+  </Routes>
+
+  </BrowserRouter>
+
+);
+
+
 }
 
 export default App;
