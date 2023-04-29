@@ -27,7 +27,7 @@ function HomePage() {
         });
 
         axiosInstance.post(`/api/notion_code`, {
-            code: code}
+            'code': code}
             )
         .then((res) => {    
             console.log(res.data);
