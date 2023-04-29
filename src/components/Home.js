@@ -19,7 +19,7 @@ function HomePage() {
         const encodedCredentials = Buffer.from(credentials).toString('base64');
         console.log('encodedCredentials',encodedCredentials);
         const baseURL = 'https://licorice-backend.onrender.com'
-        const axiosInstance = axios.create({
+        const axiosInstance = axios.create({ 
             baseURL: baseURL,
             headers: {
                 'Content-Type': 'application/json',
